@@ -1,0 +1,149 @@
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <title>Nippers</title>
+  <link rel="icon" href="Nicon.png">
+</head>
+<body>
+  <div class="header-box">
+      <h1>Nippers Project Index</h1>
+      <img src="https://2.bp.blogspot.com/-tDistlmIO1I/WJgjcBCvtjI/AAAAAAAAEpA/C6BvnaD5o4ouV5wwvskyW7VGLFRWmdtWACLcB/s1600/lamp%2Bpoll.png">
+      <br>scroll<br>
+      <img src="pinkArrow.png">
+  </div>
+<div id="pics">
+  <div class="pic" id="mfm">
+    <img src="mfm.png" style="width:50%; float:left">
+    <div class="text">
+        <headline><b>My Favorite Murder: The Browser Game</b></headline>
+        <hr>
+        A work in progress based on the My Favorite Murder podcast by Karen Kilgariff and Georgia Hardstark, this game is a scrolling platformer about murderers and cats.
+        <br><br><a href="https://nippers.github.io/MFMgame/">Play</a> or <a href="https://github.com/Nippers/MFMgame">contribute</a> on GitHub
+    </div>
+  </div>
+  <div class="pic" id="dot">
+    <img src="dot.png" style="width:50%; float:right">
+    <div class="text">
+        <headline><b>The Pathetic Dot</b></headline>
+        <hr>
+        A game for law students illustrating Lawrence Lessig's theory of code as law.
+        <br><br>
+        <a href="https://jsfiddle.net/Nipperz/6jsf0bu8/Play"> Play</a> on JSFiddle
+    </div>
+  </div>
+  <div class="pic" id="polygamy">
+    <img src="polygamy.png" style="width:50%; float:left">
+    <div class="text">
+        <headline><b>Economic Models of Polygamous Marriage Markets</b></headline>
+        <hr>
+        Models of polygamous marriage markets under varying incentives, made to accompany a family law essay.
+        <br><br><a href="https://nippers.github.io/polygamy/">View</a>
+    </div>
+  </div>
+  <br><br><br><br>
+  <div style="width:400px;background:white;border-radius:50px;padding:1em;"><headline><b>Some Website Layouts</b></headline></div>
+  <br>
+  <a href="https://nippers.github.io/bugs4/"><img src="bugs2.png" style="height:200;border:3px solid black;"></a>
+  <a href="https://nippers.github.io/bugs/"><img src="bugs1.png" style="height:200;border:3px solid black;"></a>
+  <a href="https://nippers.github.io/bugs3/"><img src="bugs3.png" style="height:200;border:3px solid black;"></a>
+  <a href="https://nippers.github.io/birdSite/"><img src="birdSite.png" style="height:200;border:3px solid black;"></a>
+  <a href="https://nippers.github.io/PoppaeaTheChiweenie/"><img src="poppaea.png" style="height:200;border:3px solid black;"></a>
+</div>
+
+</body>
+
+<style>
+
+html {
+box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+box-sizing: inherit;
+-moz-box-sizing: inherit;
+}
+body {
+background: black;
+font-family: 'Lato', sans-serif;
+font-size: 12px;
+line-height: 1.5;
+margin: 0;
+-webkit-font-smoothing: antialiased;
+}
+.header-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-size: 30px;
+  font-family: 'Amatic SC', cursive;
+  overflow: hidden;
+  width: 100%;
+  height:100%;
+  background: black;
+  padding: 10%;
+  text-align: center;
+  transition-duration: 0.5s;
+}
+#pics {
+  margin-top: 500px;
+  padding:2em;
+}
+.pic{
+  display:inline-block;
+  padding:5em;
+  width:100%;
+  color:white;
+}
+
+h1{
+  padding: 0;
+  margin: 0;
+}
+.text{
+  float:left;
+  font-family: monospace;
+  font-size: 18;
+  width:50%;
+  padding: 20px;
+  border-radius: 50px;
+  background: white;
+  color:black;
+  text-align: left;
+}
+headline{
+  font-family: monospace;
+  font-size: 22px;
+}
+a{
+  color:#ff0066;
+}
+.smaller {
+    padding: 10px;
+    font-size: 14px;
+    height:60px;
+    border-bottom: 1px solid white;
+}
+
+
+</style>
+
+<script>
+$(function(){
+ var shrinkHeader = 50;
+  $(window).scroll(function() {
+    var scroll = getCurrentScroll();
+      if ( scroll >= shrinkHeader ) {
+           $('.header-box').addClass('smaller');
+        }
+        else {
+            $('.header-box').removeClass('smaller');
+        }
+  });
+function getCurrentScroll() {
+    return window.pageYOffset || document.documentElement.scrollTop;
+    }
+});
+</script>
